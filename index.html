@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Planner Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+background:linear-gradient(135deg,#0f172a,#1e1b4b,#312e81);
+padding:20px;
+color:white;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.header{
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.15);
+padding:30px;
+border-radius:30px;
+margin-bottom:25px;
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+.header h1{
+font-size:2.5rem;
+}
+
+.header p{
+opacity:.8;
+margin-top:8px;
+}
+
+.countdown{
+margin-top:20px;
+font-size:1.2rem;
+font-weight:600;
+color:#60a5fa;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+padding:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.card h2{
+margin-bottom:20px;
+}
+
+.timeline{
+display:flex;
+justify-content:space-between;
+padding:14px;
+margin-bottom:10px;
+border-radius:15px;
+background:rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.timeline:hover{
+transform:translateX(5px);
+background:rgba(255,255,255,.12);
+}
+
+.subject{
+padding:15px;
+margin-bottom:12px;
+border-radius:18px;
+background:linear-gradient(
+135deg,
+rgba(96,165,250,.3),
+rgba(139,92,246,.3)
+);
+border:1px solid rgba(255,255,255,.1);
+}
+
+.subject strong{
+display:block;
+font-size:1rem;
+margin-bottom:5px;
+}
+
+.check{
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px;
+margin-bottom:10px;
+background:rgba(255,255,255,.05);
+border-radius:15px;
+}
+
+.check input{
+width:20px;
+height:20px;
+}
+
+.progress{
+height:20px;
+background:rgba(255,255,255,.1);
+border-radius:50px;
+overflow:hidden;
+margin-top:20px;
+}
+
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(
+90deg,
+#60a5fa,
+#8b5cf6
+);
+transition:.4s;
+}
+
+.quote{
+margin-top:20px;
+font-style:italic;
+opacity:.8;
+text-align:center;
+}
+
+@media(max-width:900px){
+.grid{
+grid-template-columns:1fr;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+<h1>📚 Study Planner Premium</h1>
+<p>Bismillah Tidak Gagal Lagi 2026</p>
+
+<div class="countdown">
+⏳ Les Dimulai Dalam:
+<span id="timer"></span>
+</div>
+
+<div class="progress">
+<div class="progress-bar" id="progress"></div>
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h2>⏰ Aktivitas Harian</h2>
+
+<div class="timeline">
+<span>10.00 - 11.00</span>
+<span>Bangun • Mandi • Sarapan</span>
+</div>
+
+<div class="timeline">
+<span>11.00 - 13.00</span>
+<span>Belajar Utama</span>
+</div>
+
+<div class="timeline">
+<span>13.00 - 14.00</span>
+<span>Istirahat</span>
+</div>
+
+<div class="timeline">
+<span>14.00 - 16.00</span>
+<span>Belajar Lanjutan</span>
+</div>
+
+<div class="timeline">
+<span>16.00 - 17.00</span>
+<span>Olahraga Ringan</span>
+</div>
+
+<div class="timeline">
+<span>17.00 - 18.00</span>
+<span>Review Materi</span>
+</div>
+
+<div class="timeline">
+<span>19.30 - 21.30</span>
+<span>Kerja Soal</span>
+</div>
+
+<div class="timeline">
+<span>21.30 - 23.00</span>
+<span>TikTok & Hiburan</span>
+</div>
+
+<div class="timeline">
+<span>23.00</span>
+<span>Tidur</span>
+</div>
+
+</div>
+
+<div class="card">
+<h2>📝 Jadwal Materi</h2>
+
+<div class="subject">
+<strong>22 Juni</strong>
+Endokrin
+</div>
+
+<div class="subject">
+<strong>23 Juni</strong>
+Obgyn (2)
+</div>
+
+<div class="subject">
+<strong>24 Juni</strong>
+Mata (2) & THT (2)
+</div>
+
+<div class="subject">
+<strong>25 Juni</strong>
+GEH
+</div>
+
+<div class="subject">
+<strong>26 Juni</strong>
+Kulit (2)
+</div>
+
+<div class="subject">
+<strong>27 Juni</strong>
+Tropis & Hematologi
+</div>
+
+<div class="subject">
+<strong>28 Juni</strong>
+Neuro & Kardio
+</div>
+
+<div class="subject">
+<strong>29 Juni</strong>
+Bedah (1-3)
+</div>
+
+<div class="subject">
+<strong>30 Juni</strong>
+Nefro & Pediatrik
+</div>
+
+<div class="subject">
+<strong>1 Juli</strong>
+Respirasi & Psikiatri
+</div>
+
+<div class="subject">
+<strong>2 Juli</strong>
+IKM Bioetik & Forensik
+</div>
+
+</div>
+
+</div>
+
+<div class="card" style="margin-top:20px">
+<h2>✅ Checklist Harian</h2>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>Bangun Jam 10.00</span>
+</div>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>Mandi</span>
+</div>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>Belajar Sesi 1</span>
+</div>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>Belajar Sesi 2</span>
+</div>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>Review Materi</span>
+</div>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>Kerja Soal</span>
+</div>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>TikTok Maksimal 1,5 Jam</span>
+</div>
+
+<div class="check">
+<input type="checkbox" class="task">
+<span>Tidur Sebelum 23.00</span>
+</div>
+
+<div class="quote">
+"Disiplin mengalahkan motivasi."
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const tasks = document.querySelectorAll('.task');
+const progress = document.getElementById('progress');
+
+function updateProgress(){
+
+let checked = document.querySelectorAll('.task:checked').length;
+let total = tasks.length;
+
+let percent = (checked/total)*100;
+
+progress.style.width = percent + "%";
+}
+
+tasks.forEach(task=>{
+task.addEventListener('change',updateProgress);
+});
+
+const targetDate = new Date("July 6, 2026 08:00:00");
+
+function countdown(){
+
+const now = new Date();
+const diff = targetDate - now;
+
+const days = Math.floor(diff/(1000*60*60*24));
+const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+const mins = Math.floor((diff%(1000*60*60))/(1000*60));
+
+document.getElementById("timer").innerHTML =
+days+" Hari "+hours+" Jam "+mins+" Menit";
+
+}
+
+setInterval(countdown,1000);
+countdown();
+
+</script>
+
+</body>
+</html>
